@@ -1,0 +1,98 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Code, Palette, Zap, Users } from "lucide-react";
+
+const AboutSection = () => {
+  const skills = [
+    "React", "TypeScript", "Node.js", "Python", "PostgreSQL", 
+    "AWS", "Docker", "Figma", "Tailwind CSS", "GraphQL"
+  ];
+
+  const features = [
+    {
+      icon: Code,
+      title: "Clean Code",
+      description: "Writing maintainable, scalable code with modern best practices"
+    },
+    {
+      icon: Palette,
+      title: "UI/UX Design",
+      description: "Creating beautiful, intuitive user experiences and interfaces"
+    },
+    {
+      icon: Zap,
+      title: "Performance",
+      description: "Optimizing applications for speed and user experience"
+    },
+    {
+      icon: Users,
+      title: "Collaboration",
+      description: "Working effectively in teams and communicating with stakeholders"
+    }
+  ];
+
+  return (
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            About Me
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            I'm a passionate developer who loves building exceptional digital experiences
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Profile & Description */}
+          <div className="space-y-6">
+            <div className="prose prose-lg max-w-none text-muted-foreground">
+              <p className="text-lg leading-relaxed">
+                With over 5 years of experience in full-stack development, I specialize in 
+                creating modern web applications using React, Node.js, and cloud technologies. 
+                I'm passionate about writing clean, efficient code and delivering exceptional user experiences.
+              </p>
+              <p className="text-lg leading-relaxed">
+                When I'm not coding, you'll find me exploring new technologies, contributing to 
+                open-source projects, or sharing knowledge with the developer community.
+              </p>
+            </div>
+
+            {/* Skills */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Technologies & Tools</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <Badge 
+                    key={skill} 
+                    variant="secondary" 
+                    className="text-sm py-1 px-3 bg-card-gradient border border-border"
+                  >
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <Card key={index} className="bg-card-gradient border-border shadow-card hover:shadow-glow transition-all duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className="mb-4 mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <feature.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
