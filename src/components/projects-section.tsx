@@ -6,36 +6,16 @@ import { ExternalLink, Github } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and real-time inventory management.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-      github: "https://github.com",
-      live: "https://example.com"
+      title: "BrainBuddy",
+      description: "Your AI Study Partner to help you make concise notes before your exams. An intelligent companion that helps students create effective study materials and organize their learning process.",
+      image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=500&h=300&fit=crop",
+      technologies: ["React", "Node.js", "AI/ML", "Tailwind CSS"]
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      technologies: ["React", "TypeScript", "Socket.io", "MongoDB", "Express"],
-      github: "https://github.com",
-      live: "https://example.com"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "A responsive weather dashboard with location-based forecasts, interactive maps, and historical weather data visualization.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop",
-      technologies: ["React", "D3.js", "Weather API", "Tailwind CSS"],
-      github: "https://github.com",
-      live: "https://example.com"
-    },
-    {
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website built with React and Tailwind CSS. Features smooth animations and dark mode support.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcb5d?w=500&h=300&fit=crop",
-      technologies: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
-      github: "https://github.com",
-      live: "https://example.com"
+      title: "Resume Analyzer",
+      description: "AI Powered resume analyzer to make your resume interview-ready. Provides comprehensive feedback, suggestions, and optimization tips for better job applications.",
+      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&h=300&fit=crop",
+      technologies: ["Python", "AI/ML", "React", "Node.js"]
     }
   ];
 
@@ -86,20 +66,6 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-3">
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="gap-2">
-                      <Github className="w-4 h-4" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button variant="glow" size="sm" asChild>
-                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="gap-2">
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
-                  </Button>
-                </div>
               </CardContent>
             </Card>
           ))}

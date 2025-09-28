@@ -55,19 +55,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "alex@example.com",
-      href: "mailto:alex@example.com"
+      value: "kamyasinghal02@gmail.com",
+      href: "mailto:kamyasinghal02@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91-7666902713",
+      href: "tel:+917666902713"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Pune, India",
       href: "#"
     }
   ];

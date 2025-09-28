@@ -28,17 +28,16 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               <span className="text-foreground">Hi, I'm</span>{" "}
               <span className="bg-text-gradient bg-clip-text text-transparent">
-                Alex Johnson
+                Kamya Singhal
               </span>
             </h1>
             <h2 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground font-light">
-              Full-Stack Developer & UI/UX Designer
+              Computer Science Student | Aspiring Full Stack Developer | Exploring Web, Cybersecurity & AI | Curious Learner
             </h2>
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            I craft beautiful, functional web experiences with modern technologies.
-            Passionate about clean code, innovative design, and turning ideas into reality.
+            I'm a Computer Science student passionate about web development, while exploring the worlds of cybersecurity and AI to broaden my skills.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -61,13 +60,13 @@ const HeroSection = () => {
           </div>
 
           <div className="flex justify-center space-x-6 pt-8">
-            <a href="https://github.com" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="https://github.com/kamyasinghal" className="text-muted-foreground hover:text-primary transition-colors">
               <Github className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="https://www.linkedin.com/in/kamya-singhal-b09b5732a/" className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="mailto:alex@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="mailto:kamyasinghal02@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
               <Mail className="w-6 h-6" />
             </a>
           </div>

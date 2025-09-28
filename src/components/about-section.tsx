@@ -4,8 +4,8 @@ import { Code, Palette, Zap, Users } from "lucide-react";
 
 const AboutSection = () => {
   const skills = [
-    "React", "TypeScript", "Node.js", "Python", "PostgreSQL", 
-    "AWS", "Docker", "Figma", "Tailwind CSS", "GraphQL"
+    "C", "C++", "Java", "Python", "MySQL", 
+    "Node.js", "React", "Tailwind CSS", "HTML"
   ];
 
   const features = [
@@ -48,13 +48,10 @@ const AboutSection = () => {
           <div className="space-y-6">
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed">
-                With over 5 years of experience in full-stack development, I specialize in 
-                creating modern web applications using React, Node.js, and cloud technologies. 
-                I'm passionate about writing clean, efficient code and delivering exceptional user experiences.
+                I'm a Computer Science student currently in my 2nd year, aspiring to become a full-stack developer while also exploring cybersecurity and AI. I enjoy building web projects, learning new technologies, and working on collaborative ideas that sharpen my skills.
               </p>
               <p className="text-lg leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or sharing knowledge with the developer community.
+                When I'm not studying or coding, you'll often find me participating in college clubs, hosting events, or discovering new trends in tech and beyond.
               </p>
             </div>
 
