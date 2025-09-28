@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -127,10 +127,22 @@ const ContactSection = () => {
                 Whether you're looking for a full-stack developer, need help with 
                 a specific project, or just want to chat about technology, feel free to reach out.
               </p>
-              <p className="leading-relaxed">
+              <p className="leading-relaxed mb-6">
                 I typically respond to messages within 24 hours and would love to 
                 discuss how we can bring your ideas to life.
               </p>
+              <Button 
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/resume.pdf';
+                  link.download = 'Kamya_Singhal_Resume.pdf';
+                  link.click();
+                }}
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download Resume
+              </Button>
             </div>
           </div>
 

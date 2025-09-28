@@ -16,6 +16,12 @@ const ProjectsSection = () => {
       description: "AI Powered resume analyzer to make your resume interview-ready. Provides comprehensive feedback, suggestions, and optimization tips for better job applications.",
       image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&h=300&fit=crop",
       technologies: ["Python", "AI/ML", "React", "Node.js"]
+    },
+    {
+      title: "Portfolio Website", 
+      description: "A modern, responsive portfolio website showcasing my projects, skills, and achievements. Built with React and Tailwind CSS featuring dark theme, smooth animations, and clean design.",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
+      technologies: ["React", "Tailwind CSS", "TypeScript", "HTML"]
     }
   ];
 
@@ -31,7 +37,7 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card 
               key={index} 

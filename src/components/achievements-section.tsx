@@ -6,59 +6,59 @@ const AchievementsSection = () => {
   const achievements = [
     {
       icon: Trophy,
-      year: "2023",
-      title: "React Developer of the Year",
-      organization: "Tech Awards",
-      description: "Recognized for outstanding contributions to React development and community engagement",
-      type: "Award"
-    },
-    {
-      icon: Award,
-      year: "2023",
-      title: "Open Source Contributor",
-      organization: "GitHub",
-      description: "Contributing to popular open-source projects with 500+ merged PRs",
-      type: "Recognition"
-    },
-    {
-      icon: Star,
-      year: "2022",
-      title: "Featured Developer",
-      organization: "Dev.to",
-      description: "Featured in Dev.to's top developers list for technical writing and tutorials",
-      type: "Feature"
-    },
-    {
-      icon: Zap,
-      year: "2022",
-      title: "Hackathon Winner",
-      organization: "TechCrunch Disrupt",
-      description: "First place in the web development category at TechCrunch Disrupt hackathon",
+      year: "2025",
+      title: "2nd Runner-up in Mastering Hackathons Workshop",
+      organization: "Hackathon Event",
+      description: "Secured 2nd runner-up position in the mastering hackathons workshop competition",
       type: "Competition"
     },
     {
-      icon: Trophy,
-      year: "2021",
-      title: "Full-Stack Certification",
-      organization: "AWS",
-      description: "AWS Certified Solutions Architect and Full-Stack Developer certification",
-      type: "Certification"
+      icon: Zap,
+      year: "2025",
+      title: "Hackathon Participant",
+      organization: "SIH, Felicity'25",
+      description: "Participated in multiple online and offline hackathons including Smart India Hackathon and Felicity'25",
+      type: "Participation"
     },
     {
       icon: Award,
-      year: "2021",
-      title: "Team Lead Excellence",
-      organization: "Previous Company",
-      description: "Led a team of 6 developers to successfully deliver 15+ projects on time",
-      type: "Leadership"
+      year: "2024",
+      title: "1st Runner-up in District Level Chess",
+      organization: "District Chess Championship",
+      description: "Achieved 1st runner-up position in district level chess tournament",
+      type: "Sports"
+    },
+    {
+      icon: Star,
+      year: "2024",
+      title: "Workshop Volunteer",
+      organization: "Futurix",
+      description: "Volunteered in AI Mastery Workshop, Lens Lumina, and Tech Mesh organized by Futurix",
+      type: "Volunteer"
+    },
+    {
+      icon: Trophy,
+      year: "Ongoing",
+      title: "Competitive Programming",
+      organization: "HackerRank, GFG, CodeChef",
+      description: "Learning DSA in Java and solving competitive coding problems on various platforms",
+      type: "Skill Development"
+    },
+    {
+      icon: Award,
+      year: "Ongoing",
+      title: "Multi-Domain Explorer",
+      organization: "Self Learning",
+      description: "Gaining exposure to Web Development, AI/ML, Cloud Computing, Blockchain, and OODP",
+      type: "Learning"
     }
   ];
 
   const stats = [
-    { number: "50+", label: "Projects Completed" },
-    { number: "5+", label: "Years Experience" },
-    { number: "100K+", label: "Lines of Code" },
-    { number: "20+", label: "Happy Clients" }
+    { number: "100+", label: "Coding Challenges" },
+    { number: "4+", label: "Years Experience" },
+    { number: "10K+", label: "Lines of Code" },
+    { number: "Multiple", label: "Group Projects" }
   ];
 
   return (
