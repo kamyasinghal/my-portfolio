@@ -25,22 +25,28 @@ const PROJECT_MAPPING: Record<string, Partial<Project>> = {
     title: 'Vibe App',
     description: 'A modern application for connecting and sharing experiences with friends.',
     image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500&h=300&fit=crop',
-    liveUrl: 'https://vibe-app-teal.vercel.app/'
+    liveUrl: 'https://vibe-app-teal.vercel.app/',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
   },
   'brainbuddy': {
     title: 'BrainBuddy',
     description: 'Your AI Study Partner to help you make concise notes before your exams. An intelligent companion that helps students create effective study materials and organize their learning process.',
-    image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=500&h=300&fit=crop'
+    image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=500&h=300&fit=crop',
+    liveUrl: 'https://brainbuddy-theta.vercel.app/',
+    technologies: ['React', 'Node.js', 'AI/ML', 'Tailwind CSS']
   },
   'resume-analyzer': {
     title: 'Resume Analyzer',
     description: 'AI Powered resume analyzer to make your resume interview-ready. Provides comprehensive feedback, suggestions, and optimization tips for better job applications.',
-    image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&h=300&fit=crop'
+    image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&h=300&fit=crop',
+    liveUrl: 'https://kamyasinghal.github.io/resume-analyzer/',
+    technologies: ['HTML', 'CSS', 'JavaScript']
   },
   'my-portfolio': {
     title: 'Portfolio Website',
     description: 'A modern, responsive portfolio website showcasing my projects, skills, and achievements. Built with React and Tailwind CSS featuring dark theme, smooth animations, and clean design.',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop'
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
   }
 };
 
@@ -68,7 +74,7 @@ export const useGitHubRepos = (username: string) => {
               title: mapping?.title || repo.name,
               description: mapping?.description || repo.description || 'No description available',
               image: mapping?.image || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop',
-              technologies: repo.topics.length > 0 ? repo.topics : ['React', 'TypeScript'],
+              technologies: mapping?.technologies || (repo.topics.length > 0 ? repo.topics : ['React', 'TypeScript']),
               githubUrl: repo.html_url,
               liveUrl: mapping?.liveUrl || repo.homepage || undefined
             };

@@ -29,7 +29,7 @@ const HeroSection = () => {
           {/* Profile Image */}
           <div className="flex justify-center mb-8">
             <Avatar className="w-32 h-32 border-4 border-primary shadow-glow">
-              <AvatarImage src={profileImage} alt="Kamya Singhal" />
+              <AvatarImage src={profileImage} alt="Kamya Singhal" className="object-cover" />
               <AvatarFallback>KS</AvatarFallback>
             </Avatar>
           </div>

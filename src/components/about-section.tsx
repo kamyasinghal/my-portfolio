@@ -1,8 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Code, Palette, Zap, Users } from "lucide-react";
-import profileImage from "@/assets/profile.png";
 
 const AboutSection = () => {
   const skills = [
@@ -48,14 +46,6 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile & Description */}
           <div className="space-y-6">
-            {/* Profile Image for About Section */}
-            <div className="flex justify-center lg:justify-start mb-6">
-              <Avatar className="w-40 h-40 border-4 border-primary shadow-glow">
-                <AvatarImage src={profileImage} alt="Kamya Singhal" />
-                <AvatarFallback>KS</AvatarFallback>
-              </Avatar>
-            </div>
-            
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed">
                 I'm a Computer Science student currently in my 2nd year, aspiring to become a full-stack developer while also exploring cybersecurity and AI. I enjoy building web projects, learning new technologies, and working on collaborative ideas that sharpen my skills.
