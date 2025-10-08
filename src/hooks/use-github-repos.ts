@@ -58,7 +58,7 @@ export const useGitHubRepos = (username: string) => {
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=10`);
+        const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`);
         
         if (!response.ok) {
           throw new Error('Failed to fetch repositories');
@@ -66,19 +66,24 @@ export const useGitHubRepos = (username: string) => {
 
         const repos: GitHubRepo[] = await response.json();
         
-        const formattedProjects: Project[] = repos
-          .filter(repo => PROJECT_MAPPING[repo.name.toLowerCase()])
-          .map(repo => {
-            const mapping = PROJECT_MAPPING[repo.name.toLowerCase()];
-            return {
-              title: mapping?.title || repo.name,
-              description: mapping?.description || repo.description || 'No description available',
-              image: mapping?.image || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop',
-              technologies: mapping?.technologies || (repo.topics.length > 0 ? repo.topics : ['React', 'TypeScript']),
-              githubUrl: repo.html_url,
-              liveUrl: mapping?.liveUrl || repo.homepage || undefined
-            };
-          });
+        // Create a map of repo names to repo data for easy lookup
+        const repoMap = new Map(
+          repos.map(repo => [repo.name.toLowerCase(), repo])
+        );
+
+        // Always show all projects from PROJECT_MAPPING, overlay with GitHub data if available
+        const formattedProjects: Project[] = Object.entries(PROJECT_MAPPING).map(([repoName, mapping]) => {
+          const repo = repoMap.get(repoName);
+          
+          return {
+            title: mapping?.title || repoName,
+            description: mapping?.description || repo?.description || 'No description available',
+            image: mapping?.image || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop',
+            technologies: mapping?.technologies || (repo?.topics && repo.topics.length > 0 ? repo.topics : ['React', 'TypeScript']),
+            githubUrl: repo?.html_url || `https://github.com/${username}/${repoName}`,
+            liveUrl: mapping?.liveUrl || repo?.homepage || undefined
+          };
+        });
 
         setProjects(formattedProjects);
       } catch (err) {
