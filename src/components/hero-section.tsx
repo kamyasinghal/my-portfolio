@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import profileImage from "@/assets/profile.png";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -24,6 +26,14 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
+          {/* Profile Image */}
+          <div className="flex justify-center mb-8">
+            <Avatar className="w-32 h-32 border-4 border-primary shadow-glow">
+              <AvatarImage src={profileImage} alt="Kamya Singhal" />
+              <AvatarFallback>KS</AvatarFallback>
+            </Avatar>
+          </div>
+          
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               <span className="text-foreground">Hi, I'm</span>{" "}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "./button";
+import { ThemeToggle } from "./theme-toggle";
 import { Menu, X, Download } from "lucide-react";
 
 const Navigation = () => {
@@ -29,7 +30,6 @@ const Navigation = () => {
             </span>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
@@ -44,11 +44,14 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className="hidden md:block">
-            <Button variant="outline" size="sm" className="gap-2">
-              <Download className="w-4 h-4" />
-              Resume
-            </Button>
+          <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle />
+            <a href="/resume.pdf" download>
+              <Button variant="outline" size="sm" className="gap-2">
+                <Download className="w-4 h-4" />
+                Resume
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -76,10 +79,15 @@ const Navigation = () => {
                   {item.name}
                 </button>
               ))}
-              <Button variant="outline" size="sm" className="gap-2 mt-2 w-full">
-                <Download className="w-4 h-4" />
-                Resume
-              </Button>
+              <div className="flex gap-2 mt-2">
+                <ThemeToggle />
+                <a href="/resume.pdf" download className="flex-1">
+                  <Button variant="outline" size="sm" className="gap-2 w-full">
+                    <Download className="w-4 h-4" />
+                    Resume
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         )}
